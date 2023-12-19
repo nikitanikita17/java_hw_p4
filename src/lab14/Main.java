@@ -1,6 +1,5 @@
 package lab14;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -83,12 +82,10 @@ class BoundedWaitList<E> extends WaitList<E> {
                 '}';
     }
 
-    // Adding a method to remove an item that is not the first in the queue
     public void removeNonFirstOccurrence(E element) {
         content.remove(element);
     }
 
-    // Adding a method to send the first item back to the end of the list
     public void sendFirstToEnd() {
         if (!content.isEmpty()) {
             E first = content.poll();
